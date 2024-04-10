@@ -1,0 +1,56 @@
+2024/04/10 20:10:00 Database connected
+2024/04/10 20:10:00 Server is running on :8080
+2024/04/10 20:10:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/10 20:10:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/10 20:10:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/10 20:10:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/10 20:10:02 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/10 20:10:02 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
