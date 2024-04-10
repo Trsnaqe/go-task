@@ -6,7 +6,6 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/swaggo/swag/example/basic/docs"
 	"github.com/trsnaqe/gotask/middlewares"
 	"github.com/trsnaqe/gotask/services/task"
 	"github.com/trsnaqe/gotask/services/user"
@@ -64,15 +63,6 @@ func (s *APIServer) Run() error {
 	taskRepository := task.NewStore(s.db)
 	taskService := task.NewHandler(taskRepository)
 	taskService.RegisterRoutes(subrouter)
-
-	// programmatically set swagger info
-	docs.SwaggerInfo.Title = "GOLANG API"
-	docs.SwaggerInfo.Description = "This is a simple golang backend API prepared for a tassk."
-	docs.SwaggerInfo.Version = "1.0"
-
-	docs.SwaggerInfo.Host = s.address
-	docs.SwaggerInfo.BasePath = "/api/v1"
-	docs.SwaggerInfo.Schemes = []string{"http", "https"}
 
 	registerCommonRoutes(subrouter)
 

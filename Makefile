@@ -17,4 +17,4 @@ migrate-down:
 	@go run cmd/migrate/main.go down
 
 swagger:
-	@swag init --parseDependency -g cmd/api/api.go -g services/*/routes.go -g cmd/main.go
+	@swag init --parseDependency -g cmd/api/api.go 

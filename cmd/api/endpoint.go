@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	httpSwagger "github.com/swaggo/http-swagger"
-
-	"github.com/gorilla/mux"
+	_ "github.com/trsnaqe/gotask/docs"
 )
 
 func registerCommonRoutes(router *mux.Router) {
