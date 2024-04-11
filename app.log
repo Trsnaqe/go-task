@@ -2475,3 +2475,340 @@
     "status":"in_progress"
 
 }
+2024/04/11 22:29:54 Database connected
+2024/04/11 22:29:54 Server is running on :8080
+2024/04/11 22:30:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 22:30:15 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test@gmail.com",
+    "password":"testest"
+
+}
+2024/04/11 22:30:18 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test@gmail.com",
+    "password":"testtest"
+
+}
+2024/04/11 22:30:23 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test@gmail.com",
+    "password":"testest"
+
+}
+2024/04/11 22:30:27 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/register
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test@gmail.com",
+    "password":"testest"
+
+}
+2024/04/11 22:30:33 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/register
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "password":"testest"
+
+}
+2024/04/11 22:31:14 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/reset-password
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "oldpassword":"testest",
+    "new_password":"testest2"
+}
+2024/04/11 22:31:14 failed to validate token: token is malformed: token contains an invalid number of segments
+2024/04/11 22:31:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/reset-password
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "old_password":"testest",
+    "new_password":"testest2"
+}
+2024/04/11 22:31:35 failed to validate token: token is malformed: token contains an invalid number of segments
+2024/04/11 22:31:48 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "password":"testest",
+    "old_password":"testest",
+    "new_password":"testest2"
+}
+2024/04/11 22:32:16 Database connected
+2024/04/11 22:32:16 Server is running on :8080
+2024/04/11 22:32:18 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/change-password
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "password":"testest",
+    "old_password":"testest",
+    "new_password":"testest2"
+}
+2024/04/11 23:06:38 Database connected
+2024/04/11 23:06:38 Server is running on :8080
+2024/04/11 23:06:40 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "title":"Test",
+    "description":"testtest",
+    "status":"pending"
+
+}
+2024/04/11 23:54:36 Database connected
+2024/04/11 23:54:36 Server is running on :8080
+2024/04/11 23:54:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "title":"Test",
+    "description":"testtest",
+    "status":"pending"
+
+}
+2024/04/11 23:54:39 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "title":"Test",
+    "description":"testtest",
+    "status":"pending"
+
+}
+2024/04/11 23:58:57 Database connected
+2024/04/11 23:58:57 Server is running on :8080
+2024/04/11 23:59:08 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test@gmail.com",
+    "password":"testest"
+}
+2024/04/11 23:59:10 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "password":"testest"
+}
+2024/04/11 23:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "password":"testtest"
+}
+2024/04/11 23:59:20 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/register
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test2@gmail.com",
+    "password":"testtest"
+}
+2024/04/11 23:59:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/register
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test3@gmail.com",
+    "password":"testtest"
+}
+2024/04/12 00:28:24 Database connected
+2024/04/12 00:28:24 Server is running on :8080
+2024/04/12 00:28:26 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/register
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test@gmail.com",
+    "password":"hashedpassword123"
+}
+2024/04/12 00:28:40 Database connected
+2024/04/12 00:28:40 Server is running on :8080
+2024/04/12 00:28:48 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test55@gmail.com",
+    "password":"hashedpassword123"
+}
+2024/04/12 00:28:51 Database connected
+2024/04/12 00:28:51 Server is running on :8080
+2024/04/12 00:29:46 Database connected
+2024/04/12 00:29:46 Server is running on :8080
+2024/04/12 00:29:48 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test55@gmail.com",
+    "password":"hashedpassword123"
+}
+2024/04/12 00:29:49 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test55@gmail.com",
+    "password":"hashedpassword123"
+}
+2024/04/12 00:29:50 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test55@gmail.com",
+    "password":"hashedpassword123"
+}
+2024/04/12 00:29:50 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test55@gmail.com",
+    "password":"hashedpassword123"
+}
+2024/04/12 00:29:53 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/register
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "email":"test55@gmail.com",
+    "password":"hashedpassword123"
+}

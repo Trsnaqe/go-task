@@ -23,14 +23,12 @@ func TestCreateJWT(t *testing.T) {
 }
 
 func TestValidateJWT(t *testing.T) {
-	// Create a token
 	userID := 123
 	tokenString, err := CreateAccessToken(userID)
 	if err != nil {
 		t.Fatalf("error creating access token: %v", err)
 	}
 
-	// Validate the token
 	token, err := ValidateJWT(tokenString)
 	if err != nil {
 		t.Errorf("error validating JWT: %v", err)
@@ -40,7 +38,6 @@ func TestValidateJWT(t *testing.T) {
 		t.Error("expected token to be valid")
 	}
 
-	// Extract userID from token
 	claims, ok := token.Claims.(jwt.MapClaims)
 	if !ok {
 		t.Fatal("claims are not of type MapClaims")
@@ -61,14 +58,12 @@ func TestValidateJWT(t *testing.T) {
 }
 
 func TestHashRefreshToken(t *testing.T) {
-	// Test HashRefreshToken
 	value := "myrefresh"
 	hashedValue, err := HashRefreshToken(value)
 	if err != nil {
 		t.Fatalf("error hashing refresh token: %v", err)
 	}
 
-	// Check if hashed value is different from original value
 	if hashedValue == value {
 		t.Error("expected hashed value to be different from original value")
 	}
@@ -82,12 +77,10 @@ func TestCompareRefreshToken(t *testing.T) {
 		t.Fatalf("error hashing refresh token: %v", err)
 	}
 
-	// Check if comparison returns true for the same value
 	if !CompareRefreshToken(hashedValue, value) {
 		t.Error("expected comparison to return true for the same value")
 	}
 
-	// Check if comparison returns false for a different value
 	if CompareRefreshToken(hashedValue, "anotherrefresh") {
 		t.Error("expected comparison to return false for a different value")
 	}

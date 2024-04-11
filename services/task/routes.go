@@ -31,15 +31,16 @@ func NewHandler(store types.TaskStore) *Handler {
 }
 
 // HandleGetTasks   get-tasks
-// @Summary      Get Tasks
-// @Description  Get Tasks
-// @Tags         Task
-// @Produce      json
-// @Success      200  {object} 	types.Task
-// @Param status query string false "Task Status" Enums(pending, in_progress, completed)
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /task [get]
+//
+//	@Summary		Get Tasks
+//	@Description	Get Tasks
+//	@Tags			Task
+//	@Produce		json
+//	@Success		200		{object}	types.Task
+//	@Param			status	query		string	false	"Task Status"	Enums(pending, in_progress, completed)
+//	@Failure		400		{object}	types.ErrorResponse
+//	@Failure		500		{object}	types.ErrorResponse
+//	@Router			/task [get]
 func (h *Handler) handleGetTasks(w http.ResponseWriter, r *http.Request) {
 	statusStr := r.URL.Query().Get("status")
 
@@ -69,16 +70,17 @@ func (h *Handler) handleGetTasks(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleGetTask   Get Task by ID
-// @Summary      Get Task by ID
-// @Description  Get Task by ID
-// @Tags         Task
-// @Accept       json
-// @Produce      json
-// @Param        id    path      int      true      "Task ID"
-// @Success      200  {object} 	string
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /task/{id} [get]
+//
+//	@Summary		Get Task by ID
+//	@Description	Get Task by ID
+//	@Tags			Task
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	path		int	true	"Task ID"
+//	@Success		200	{object}	string
+//	@Failure		400	{object}	types.ErrorResponse
+//	@Failure		500	{object}	types.ErrorResponse
+//	@Router			/task/{id} [get]
 func (h *Handler) handleGetTask(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	taskIDStr, ok := vars["id"]
@@ -103,16 +105,17 @@ func (h *Handler) handleGetTask(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleCreateTask   create-task
-// @Summary      Create task
-// @Description  Create Task
-// @Tags         Task
-// @Accept       json
-// @Produce      json
-// @Param        CreateTaskPayload      body      types.CreateTaskPayload      true      "create task"
-// @Success      201  {object} 	string
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /task [post]
+//
+//	@Summary		Create task
+//	@Description	Create Task
+//	@Tags			Task
+//	@Accept			json
+//	@Produce		json
+//	@Param			CreateTaskPayload	body		types.CreateTaskPayload	true	"create task"
+//	@Success		201					{object}	string
+//	@Failure		400					{object}	types.ErrorResponse
+//	@Failure		500					{object}	types.ErrorResponse
+//	@Router			/task [post]
 func (h *Handler) handleCreateTask(w http.ResponseWriter, r *http.Request) {
 	var payload types.CreateTaskPayload
 	err := utils.ParseJSON(r, &payload)
@@ -147,16 +150,17 @@ func (h *Handler) handleCreateTask(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleUpdateTask   update-task
-// @Summary      Update Task
-// @Description  Update Task
-// @Tags         Task
-// @Accept       json
-// @Produce      json
-// @Param        id    path      int      true      "Task ID"
-// @Success      200  {object} 	string
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /task/{id} [put]
+//
+//	@Summary		Update Task
+//	@Description	Update Task
+//	@Tags			Task
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	path		int	true	"Task ID"
+//	@Success		200	{object}	string
+//	@Failure		400	{object}	types.ErrorResponse
+//	@Failure		500	{object}	types.ErrorResponse
+//	@Router			/task/{id} [put]
 func (h *Handler) handleUpdateTask(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	taskIDStr, ok := vars["id"]
@@ -196,16 +200,17 @@ func (h *Handler) handleUpdateTask(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleDeleteTask   delete-task
-// @Summary      Delete Task
-// @Description  Delete Task
-// @Tags         Task
-// @Accept       json
-// @Produce      json
-// @Param        id    path      int      true      "Task ID"
-// @Success      200  {object} 	string
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /task/{id} [delete]
+//
+//	@Summary		Delete Task
+//	@Description	Delete Task
+//	@Tags			Task
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	path		int	true	"Task ID"
+//	@Success		200	{object}	string
+//	@Failure		400	{object}	types.ErrorResponse
+//	@Failure		500	{object}	types.ErrorResponse
+//	@Router			/task/{id} [delete]
 func (h *Handler) handleDeleteTask(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	taskIDStr, ok := vars["id"]
@@ -236,16 +241,17 @@ func (h *Handler) handleDeleteTask(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleProgressTask   progress-task
-// @Summary      Progress Task
-// @Description  Progress Task one further between stages, utilizes mutex to prevent concurrent progress
-// @Tags         Task
-// @Accept       json
-// @Produce      json
-// @Param        id    path      int      true      "Task ID"
-// @Success      200  {object} 	string
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /task/{id} [patch]
+//
+//	@Summary		Progress Task
+//	@Description	Progress Task one further between stages, utilizes mutex to prevent concurrent progress
+//	@Tags			Task
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	path		int	true	"Task ID"
+//	@Success		200	{object}	string
+//	@Failure		400	{object}	types.ErrorResponse
+//	@Failure		500	{object}	types.ErrorResponse
+//	@Router			/task/{id} [patch]
 func (h *Handler) handleProgressTask(w http.ResponseWriter, r *http.Request) {
 	locked := h.mu.TryLock()
 	if locked {
@@ -283,15 +289,16 @@ func (h *Handler) handleProgressTask(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleConcurrency   concurrency-demo
-// @Summary      Concurrency Demo
-// @Description  Endpoint to demonstrate queued processing, Check logs for processing status and prometheus metrics in `api/v1/metrics` for queue length and tasks processed
-// @Tags         Task
-// @Accept       json
-// @Produce      json
-// @Success      200  {object} 	string
-// @Failure      400  {object}  types.ErrorResponse
-// @Failure      500  {object}  types.ErrorResponse
-// @Router       /concurrency [post]
+//
+//	@Summary		Concurrency Demo
+//	@Description	Endpoint to demonstrate queued processing, Check logs for processing status and prometheus metrics in `api/v1/metrics` for queue length and tasks processed
+//	@Tags			Task
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	string
+//	@Failure		400	{object}	types.ErrorResponse
+//	@Failure		500	{object}	types.ErrorResponse
+//	@Router			/concurrency [post]
 func (h *Handler) handleConcurrencyDemo(w http.ResponseWriter, r *http.Request) {
 	for i := 1; i <= 4; i++ {
 		// add queued task to prometheus

@@ -21,11 +21,12 @@ definitions:
         minLength: 3
         type: string
       status:
+        allOf:
+        - $ref: '#/definitions/types.TaskStatus'
         enum:
         - pending
         - in_progress
         - completed
-        type: string
       title:
         maxLength: 32
         minLength: 3
@@ -75,12 +76,22 @@ definitions:
       id:
         type: integer
       status:
-        type: string
+        $ref: '#/definitions/types.TaskStatus'
       title:
         type: string
       updated_at:
         type: string
     type: object
+  types.TaskStatus:
+    enum:
+    - pending
+    - in_progress
+    - completed
+    type: string
+    x-enum-varnames:
+    - StatusPending
+    - StatusInProgress
+    - StatusCompleted
   types.Tokens:
     properties:
       access_token:
@@ -88,6 +99,9 @@ definitions:
       refresh_token:
         type: string
     type: object
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
 host: localhost:8080
 info:
   contact:

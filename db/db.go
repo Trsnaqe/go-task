@@ -15,3 +15,10 @@ func NewMySQL(cfg mysql.Config) (*sql.DB, error) {
 
 	return db, nil
 }
+func InitStorage(db *sql.DB) {
+	err := db.Ping()
+	if err != nil {
+		log.Fatalf("failed to ping database: %v", err)
+	}
+	log.Println("Database connected")
+}

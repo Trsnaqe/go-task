@@ -39,19 +39,15 @@ type Tokens struct {
 	RefreshToken string `json:"refresh_token"`
 }
 
-// email and password are required fields, password must be between 6 and 32 characters
 type RegisterUserPayload struct {
 	Email    string `json:"email" validate:"required,email"`
 	Password string `json:"password" validate:"required,min=6,max=32"`
 }
 
-// email and password are required fields, password must be between 6 and 32 characters
 type LoginUserPayload struct {
 	Email    string `json:"email" validate:"required,email"`
 	Password string `json:"password" validate:"required,min=6,max=32"`
 }
-
-// title, description are status required fields, status must be one of  pending, in_progress and completed characters
 
 type CreateTaskPayload struct {
 	Title       string     `json:"title" validate:"required,min=3,max=32"`
@@ -59,7 +55,6 @@ type CreateTaskPayload struct {
 	Status      TaskStatus `json:"status" validate:"required,oneof=pending in_progress completed"`
 }
 
-// old password and new password are required fields, passwords must be between 6 and 32 characters
 type ChangePasswordPayload struct {
 	OldPassword string `json:"old_password" validate:"required,min=6,max=32"`
 	NewPassword string `json:"new_password" validate:"required,min=6,max=32"`

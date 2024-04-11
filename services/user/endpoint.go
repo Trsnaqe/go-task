@@ -12,5 +12,5 @@ func (h *Handler) RegisterRoutes(router *mux.Router) {
 	router.HandleFunc("/register", h.handleRegister).Methods(http.MethodPost)
 	router.HandleFunc("/logout", middlewares.AuthMiddleware(h.handleLogout, h.store)).Methods(http.MethodPost)
 	router.HandleFunc("/refresh", middlewares.AuthMiddleware(h.handleRefreshToken, h.store)).Methods(http.MethodPost)
-	router.HandleFunc("/reset-password", middlewares.AuthMiddleware(h.ChangePassword, h.store)).Methods(http.MethodPost)
+	router.HandleFunc("/change-password", middlewares.AuthMiddleware(h.ChangePassword, h.store)).Methods(http.MethodPost)
 }

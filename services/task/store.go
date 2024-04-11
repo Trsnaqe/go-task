@@ -135,7 +135,7 @@ func (s *Store) ProgressTask(taskID int) error {
 		return errors.New("task is already completed")
 	}
 
-	return s.UpdateTask(taskID, *task)
+	return s.UpdateTask(taskID, types.Task{Status: task.Status})
 }
 
 func (s *Store) DeleteTask(taskID int) error {

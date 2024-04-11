@@ -1,7 +1,6 @@
 package main
 
 import (
-	"database/sql"
 	"io"
 	"log"
 	"os"
@@ -9,7 +8,7 @@ import (
 	"github.com/go-sql-driver/mysql"
 	"github.com/trsnaqe/gotask/cmd/api"
 	"github.com/trsnaqe/gotask/config"
-	"github.com/trsnaqe/gotask/db"
+	database "github.com/trsnaqe/gotask/db"
 )
 
 func main() {
@@ -22,7 +21,7 @@ func main() {
 
 	log.SetOutput(wrt)
 
-	db, err := db.NewMySQL(mysql.Config{
+	db, err := database.NewMySQL(mysql.Config{
 		User:                 config.Envs.DBUser,
 		Passwd:               config.Envs.DBPassword,
 		Addr:                 config.Envs.DBAddress,
@@ -35,7 +34,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	initStorage(db)
+	database.InitStorage(db)
 
 	server := api.NewAPIServer(":8080", db)
 
@@ -43,12 +42,4 @@ func main() {
 		log.Fatal(err)
 	}
 
-}
-
-func initStorage(db *sql.DB) {
-	err := db.Ping()
-	if err != nil {
-		log.Fatalf("failed to ping database: %v", err)
-	}
-	log.Println("Database connected")
 }

@@ -599,11 +599,15 @@
                     "minLength": 3
                 },
                 "status": {
-                    "type": "string",
                     "enum": [
                         "pending",
                         "in_progress",
                         "completed"
+                    ],
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/types.TaskStatus"
+                        }
                     ]
                 },
                 "title": {
@@ -671,7 +675,7 @@
                     "type": "integer"
                 },
                 "status": {
-                    "type": "string"
+                    "$ref": "#/definitions/types.TaskStatus"
                 },
                 "title": {
                     "type": "string"
@@ -680,6 +684,19 @@
                     "type": "string"
                 }
             }
+        },
+        "types.TaskStatus": {
+            "type": "string",
+            "enum": [
+                "pending",
+                "in_progress",
+                "completed"
+            ],
+            "x-enum-varnames": [
+                "StatusPending",
+                "StatusInProgress",
+                "StatusCompleted"
+            ]
         },
         "types.Tokens": {
             "type": "object",
@@ -697,5 +714,9 @@
         "BasicAuth": {
             "type": "basic"
         }
+    },
+    "externalDocs": {
+        "description": "OpenAPI",
+        "url": "https://swagger.io/resources/open-api/"
     }
 }
