@@ -52,6 +52,24 @@ func (s *Store) GetTasks() ([]types.Task, error) {
 	return tasks, nil
 }
 
+// get task by status, enum
+func (s *Store) GetTasksByStatus(status types.TaskStatus) ([]types.Task, error) {
+	rows, err := s.db.Query("SELECT * FROM tasks WHERE status = ?", status)
+	if err != nil {
+		return nil, err
+	}
+
+	tasks := make([]types.Task, 0)
+	for rows.Next() {
+		t, err := scanRowIntoTask(rows)
+		if err != nil {
+			return nil, err
+		}
+		tasks = append(tasks, *t)
+	}
+	return tasks, nil
+}
+
 func scanRowIntoTask(rows *sql.Rows) (*types.Task, error) {
 	t := new(types.Task)
 	err := rows.Scan(&t.ID, &t.Title, &t.Description, &t.Status, &t.CreatedAt, &t.UpdatedAt)

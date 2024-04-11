@@ -19,18 +19,17 @@ func NewHandler(store types.UserStore) *Handler {
 	return &Handler{store: store}
 }
 
-// ShowAccount godoc
-// @Summary      Show an account
-// @Description  get string by ID
-// @Tags         accounts
+// HandleLogin   login
+// @Summary      Login to Account
+// @Description  Login to Account using email and password
+// @Tags         User
 // @Accept       json
 // @Produce      json
-// @Param        id   path      int  true  "Account ID"
-// @Success      200  {object}  string
-// @Failure      400  {object}  string
-// @Failure      404  {object}  string
-// @Failure      500  {object}  string
-// @Router       /accounts/{id} [get]
+// @Param        RegisterPayload      body      types.LoginUserPayload      true      "User email and password"
+// @Success      200  {object} 	types.Tokens
+// @Failure      400  {object}  types.ErrorResponse
+// @Failure      500  {object}  types.ErrorResponse
+// @Router       /login [post]
 func (h *Handler) handleLogin(w http.ResponseWriter, r *http.Request) {
 	var payload types.LoginUserPayload
 	err := utils.ParseJSON(r, &payload)
@@ -75,6 +74,17 @@ func (h *Handler) handleLogin(w http.ResponseWriter, r *http.Request) {
 	utils.WriteJSON(w, http.StatusOK, tokens)
 }
 
+// HandleRegister   register
+// @Summary      Register to Account
+// @Description  Register to Account using email and password
+// @Tags         User
+// @Accept       json
+// @Produce      json
+// @Param        RegisterPayload      body      types.RegisterUserPayload      true      "User email and password"
+// @Success      201  {object} 	types.Tokens
+// @Failure      400  {object}  types.ErrorResponse
+// @Failure      500  {object}  types.ErrorResponse
+// @Router       /register [post]
 func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
 	var payload types.RegisterUserPayload
 	err := utils.ParseJSON(r, &payload)
@@ -135,7 +145,19 @@ func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
 	utils.WriteJSON(w, http.StatusCreated, tokens)
 }
 
-// removes refresh token from user, effectively logging out
+// HandleLogout   logout
+// @Summary      Logout from Account
+// @Description  Removes refresh token from user, effectively logging out
+// @Tags         User
+// @Accept       json
+// @Produce      json
+// @Security     ApiKeyAuth
+// @Success      201  {object} 	nil
+// @Failure      400  {object}  types.ErrorResponse
+// @Failure      401  {object}  types.ErrorResponse
+// @Failure      403  {object}  types.ErrorResponse
+// @Failure      500  {object}  types.ErrorResponse
+// @Router       /logout [post]
 func (h *Handler) handleLogout(w http.ResponseWriter, r *http.Request) {
 	log.Println("logout")
 	log.Println(types.UserKey)
@@ -155,6 +177,19 @@ func (h *Handler) handleLogout(w http.ResponseWriter, r *http.Request) {
 	utils.WriteJSON(w, http.StatusOK, nil)
 }
 
+// HandleRefresh   refresh
+// @Summary      Refresh Tokens
+// @Description  Refresh tokens using refresh token
+// @Tags         User
+// @Accept       json
+// @Produce      json
+// @Security     ApiKeyAuth
+// @Success      201  {object} 	types.Tokens
+// @Failure      400  {object}  types.ErrorResponse
+// @Failure      401  {object}  types.ErrorResponse
+// @Failure      403  {object}  types.ErrorResponse
+// @Failure      500  {object}  types.ErrorResponse
+// @Router       /refresh [post]
 // refreshes access and refresh token using refresh token
 func (h *Handler) handleRefreshToken(w http.ResponseWriter, r *http.Request) {
 	tokenString := utils.GetTokenFromRequest(r)
@@ -200,6 +235,20 @@ func (h *Handler) handleRefreshToken(w http.ResponseWriter, r *http.Request) {
 	utils.WriteJSON(w, http.StatusOK, tokens)
 }
 
+// HandleChangePassword   change-password
+// @Summary      Change Password
+// @Description  Change password using old password
+// @Tags         User
+// @Accept       json
+// @Produce      json
+// @Security     ApiKeyAuth
+// @Param        ChangePasswordPayload      body      types.ChangePasswordPayload      true      "Old and new password"
+// @Success      200  {object} 	nil
+// @Failure      400  {object}  types.ErrorResponse
+// @Failure      401  {object}  types.ErrorResponse
+// @Failure      403  {object}  types.ErrorResponse
+// @Failure      500  {object}  types.ErrorResponse
+// @Router       /change-password [post]
 // Changes user password using old password
 func (h *Handler) ChangePassword(w http.ResponseWriter, r *http.Request) {
 	var payload types.ChangePasswordPayload

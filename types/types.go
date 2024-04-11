@@ -15,6 +15,7 @@ type TaskStore interface {
 	GetTaskByID(taskID int) (*Task, error)
 	DeleteTask(taskID int) error
 	ProgressTask(taskID int) error
+	GetTasksByStatus(status TaskStatus) ([]Task, error)
 }
 type TaskStatus string
 

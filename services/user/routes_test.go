@@ -35,14 +35,6 @@ func TestUser(t *testing.T) {
 			t.Errorf("expected status code %d, got %d", http.StatusBadRequest, rr.Code)
 		}
 	})
-
-}
-
-// try login with invalid email
-func TestUserLogin(t *testing.T) {
-	userStore := &mockUserStore{}
-	handler := NewHandler(userStore)
-
 	t.Run("should fail if the user payload is invalid", func(t *testing.T) {
 		payload := types.LoginUserPayload{
 			Email:    "test",
@@ -89,4 +81,8 @@ func (m *mockUserStore) UpdateUser(userID int, updates types.User) error {
 
 func (m *mockUserStore) ChangePassword(userID int, oldPassword string, newPassword string) error {
 	return nil
+}
+
+func (m *mockUserStore) GetTasksByStatus(status types.TaskStatus) ([]types.Task, error) {
+	return nil, nil
 }

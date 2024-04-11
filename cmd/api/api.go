@@ -35,8 +35,7 @@ func NewAPIServer(address string, db *sql.DB) *APIServer {
 
 // @license.name  Apache 2.0
 // @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
-
-// @host      localhost:8080
+// @host         localhost:8080
 // @BasePath  /api/v1
 
 // @securityDefinitions.basic  BasicAuth
@@ -44,6 +43,7 @@ func NewAPIServer(address string, db *sql.DB) *APIServer {
 // @externalDocs.description  OpenAPI
 // @externalDocs.url          https://swagger.io/resources/open-api/
 func (s *APIServer) Run() error {
+
 	limiter := rate.NewLimiter(5, 10)
 
 	router := mux.NewRouter()
@@ -51,8 +51,6 @@ func (s *APIServer) Run() error {
 	router.Use(middlewares.ExceptionMiddleware)
 	router.Use(middlewares.LoggerMiddleware)
 	router.Use(middlewares.RateLimitMiddleware(limiter))
-
-	//redirect unrecognized routes to /swagger
 
 	subrouter := router.PathPrefix("/api/v1").Subrouter()
 

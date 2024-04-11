@@ -8,11 +8,6 @@ import (
 )
 
 func (h *Handler) RegisterRoutes(router *mux.Router) {
-	// @Summary      Get log file
-	// @Description  Retrieve the log file
-	// @Produce      plain
-	// @Success      200  {string}  string
-
 	router.HandleFunc("/login", h.handleLogin).Methods(http.MethodPost)
 	router.HandleFunc("/register", h.handleRegister).Methods(http.MethodPost)
 	router.HandleFunc("/logout", middlewares.AuthMiddleware(h.handleLogout, h.store)).Methods(http.MethodPost)

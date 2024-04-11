@@ -1,4 +1,93 @@
 basePath: /api/v1
+definitions:
+  types.ChangePasswordPayload:
+    properties:
+      new_password:
+        maxLength: 32
+        minLength: 6
+        type: string
+      old_password:
+        maxLength: 32
+        minLength: 6
+        type: string
+    required:
+    - new_password
+    - old_password
+    type: object
+  types.CreateTaskPayload:
+    properties:
+      description:
+        maxLength: 255
+        minLength: 3
+        type: string
+      status:
+        enum:
+        - pending
+        - in_progress
+        - completed
+        type: string
+      title:
+        maxLength: 32
+        minLength: 3
+        type: string
+    required:
+    - description
+    - status
+    - title
+    type: object
+  types.ErrorResponse:
+    properties:
+      error:
+        type: string
+      status_code:
+        type: integer
+    type: object
+  types.LoginUserPayload:
+    properties:
+      email:
+        type: string
+      password:
+        maxLength: 32
+        minLength: 6
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  types.RegisterUserPayload:
+    properties:
+      email:
+        type: string
+      password:
+        maxLength: 32
+        minLength: 6
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  types.Task:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      status:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  types.Tokens:
+    properties:
+      access_token:
+        type: string
+      refresh_token:
+        type: string
+    type: object
 host: localhost:8080
 info:
   contact:
@@ -12,13 +101,259 @@ info:
   title: GOLANG API
   version: "1.0"
 paths:
-  /accounts/{id}:
-    get:
+  /change-password:
+    post:
       consumes:
       - application/json
-      description: get string by ID
+      description: Change password using old password
       parameters:
-      - description: Account ID
+      - description: Old and new password
+        in: body
+        name: ChangePasswordPayload
+        required: true
+        schema:
+          $ref: '#/definitions/types.ChangePasswordPayload'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Change Password
+      tags:
+      - User
+  /concurrency:
+    post:
+      consumes:
+      - application/json
+      description: Endpoint to demonstrate queued processing, Check logs for processing
+        status and prometheus metrics in `api/v1/metrics` for queue length and tasks
+        processed
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Concurrency Demo
+      tags:
+      - Task
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: Login to Account using email and password
+      parameters:
+      - description: User email and password
+        in: body
+        name: RegisterPayload
+        required: true
+        schema:
+          $ref: '#/definitions/types.LoginUserPayload'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/types.Tokens'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Login to Account
+      tags:
+      - User
+  /logout:
+    post:
+      consumes:
+      - application/json
+      description: Removes refresh token from user, effectively logging out
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Logout from Account
+      tags:
+      - User
+  /refresh:
+    post:
+      consumes:
+      - application/json
+      description: Refresh tokens using refresh token
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/types.Tokens'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Refresh Tokens
+      tags:
+      - User
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: Register to Account using email and password
+      parameters:
+      - description: User email and password
+        in: body
+        name: RegisterPayload
+        required: true
+        schema:
+          $ref: '#/definitions/types.RegisterUserPayload'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/types.Tokens'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Register to Account
+      tags:
+      - User
+  /task:
+    get:
+      description: Get Tasks
+      parameters:
+      - description: Task Status
+        enum:
+        - pending
+        - in_progress
+        - completed
+        in: query
+        name: status
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/types.Task'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Get Tasks
+      tags:
+      - Task
+    post:
+      consumes:
+      - application/json
+      description: Create Task
+      parameters:
+      - description: create task
+        in: body
+        name: CreateTaskPayload
+        required: true
+        schema:
+          $ref: '#/definitions/types.CreateTaskPayload'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Create task
+      tags:
+      - Task
+  /task/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Task
+      parameters:
+      - description: Task ID
         in: path
         name: id
         required: true
@@ -33,18 +368,99 @@ paths:
         "400":
           description: Bad Request
           schema:
-            type: string
-        "404":
-          description: Not Found
-          schema:
-            type: string
+            $ref: '#/definitions/types.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            type: string
-      summary: Show an account
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Delete Task
       tags:
-      - accounts
+      - Task
+    get:
+      consumes:
+      - application/json
+      description: Get Task by ID
+      parameters:
+      - description: Task ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Get Task by ID
+      tags:
+      - Task
+    patch:
+      consumes:
+      - application/json
+      description: Progress Task one further between stages, utilizes mutex to prevent
+        concurrent progress
+      parameters:
+      - description: Task ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Progress Task
+      tags:
+      - Task
+    put:
+      consumes:
+      - application/json
+      description: Update Task
+      parameters:
+      - description: Task ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Update Task
+      tags:
+      - Task
 securityDefinitions:
   BasicAuth:
     type: basic

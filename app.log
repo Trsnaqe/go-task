@@ -532,3 +532,1946 @@
 
 [33mContent:[0m
 
+2024/04/11 15:09:51 Database connected
+2024/04/11 15:09:51 Server is running on :8080
+2024/04/11 15:09:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:09:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:09:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:09:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:09:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:10:45 Database connected
+2024/04/11 15:10:45 Server is running on :8080
+2024/04/11 15:10:45 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:10:45 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:10:45 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:10:45 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:10:45 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:10:45 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:10 Database connected
+2024/04/11 15:11:10 Server is running on :8080
+2024/04/11 15:11:17 Database connected
+2024/04/11 15:11:17 Server is running on :8080
+2024/04/11 15:11:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:11:21 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+  "email": "string",
+  "password": "string"
+}
+2024/04/11 15:11:22 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/login
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+  "email": "string",
+  "password": "string"
+}
+2024/04/11 15:34:26 Database connected
+2024/04/11 15:34:26 Server is running on :8080
+2024/04/11 15:34:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:34:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:34:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:34:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:34:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:34:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:36:24 Database connected
+2024/04/11 15:36:24 Server is running on :8080
+2024/04/11 15:36:24 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:36:24 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:36:24 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:36:24 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:36:24 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:36:24 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:04 Database connected
+2024/04/11 15:38:04 Server is running on :8080
+2024/04/11 15:38:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m POST
+[33mURL:[0m ://localhost:8080/api/v1/logout
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:38:25 failed to validate token: token is malformed: token contains an invalid number of segments
+2024/04/11 15:39:37 Database connected
+2024/04/11 15:39:37 Server is running on :8080
+2024/04/11 15:39:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:39:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:39:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:39:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:39:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:39:38 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:41:05 Database connected
+2024/04/11 15:41:05 Server is running on :8080
+2024/04/11 15:41:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:41:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:41:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:41:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:41:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:41:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:56:46 Database connected
+2024/04/11 15:56:46 Server is running on :8080
+2024/04/11 15:56:47 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:56:47 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:56:47 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:56:47 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:56:47 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:56:47 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:57:59 Database connected
+2024/04/11 15:57:59 Server is running on :8080
+2024/04/11 15:58:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:58:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:58:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:58:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:58:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:58:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:10 Database connected
+2024/04/11 15:59:10 Server is running on :8080
+2024/04/11 15:59:11 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:11 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:11 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:11 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:12 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:13 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-16x16.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 15:59:30 Database connected
+2024/04/11 15:59:30 &{:8080 0xc0000bc340}
+2024/04/11 15:59:30 Server is running on :8080
+2024/04/11 15:59:31 Database connected
+2024/04/11 15:59:31 &{:8080 0xc0002c8410}
+2024/04/11 15:59:31 Server is running on :8080
+2024/04/11 16:00:03 Database connected
+2024/04/11 16:00:03 Server is running on :8080
+2024/04/11 16:00:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 16:00:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:32:17 Database connected
+2024/04/11 20:32:17 Server is running on :8080
+2024/04/11 20:32:21 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:32:21 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:32:21 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:32:21 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:32:21 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:00 Database connected
+2024/04/11 20:33:00 Server is running on :8080
+2024/04/11 20:33:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:28 Database connected
+2024/04/11 20:33:28 Server is running on :8080
+2024/04/11 20:33:28 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:28 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:28 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:28 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:28 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:28 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:33:44 Database connected
+2024/04/11 20:33:44 Server is running on :8080
+2024/04/11 20:33:53 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/1
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:36:54 Database connected
+2024/04/11 20:36:54 Server is running on :8080
+2024/04/11 20:36:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:36:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:36:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:36:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:36:55 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:36:55 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:03 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/{id}
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:06 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/{id}
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:25 Database connected
+2024/04/11 20:37:25 Server is running on :8080
+2024/04/11 20:37:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:25 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:32 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:44 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:37:48 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:33 Database connected
+2024/04/11 20:38:33 Server is running on :8080
+2024/04/11 20:38:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:38:42 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/1
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:39:02 Database connected
+2024/04/11 20:39:02 Server is running on :8080
+2024/04/11 20:47:09 Database connected
+2024/04/11 20:47:09 Server is running on :8080
+2024/04/11 20:47:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:47:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:47:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:47:17 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:47:18 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:47:41 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/completed
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:47:58 Database connected
+2024/04/11 20:47:58 Server is running on :8080
+2024/04/11 20:48:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:48:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:48:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:48:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:48:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:48:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:48:28 Database connected
+2024/04/11 20:48:28 Server is running on :8080
+2024/04/11 20:48:46 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/1
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:48:56 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task/status
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:53:13 Database connected
+2024/04/11 20:53:13 Server is running on :8080
+2024/04/11 20:53:14 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:14 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:14 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:14 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:15 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:15 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:19 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=pending
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:26 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=pending
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:27 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=pending
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:29 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=completed
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=in_progress
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:34 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=completed
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:58 Database connected
+2024/04/11 20:53:58 Server is running on :8080
+2024/04/11 20:53:59 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/index.html
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:59 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui.css
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:59 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-bundle.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:53:59 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/swagger-ui-standalone-preset.js
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:54:00 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/doc.json
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:54:00 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/swagger/favicon-32x32.png
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:54:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:54:08 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=completed
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+
+2024/04/11 20:54:31 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:34 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:35 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22a
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:36 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22a%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:39 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22completed%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:43 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22completed%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:44 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22completed%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:44 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22completed%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:49 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22completed%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:52 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22completed%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:54 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=completed
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:57 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:58 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:58 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:54:59 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:01 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:02 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=%22%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:03 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus=
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:04 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatu
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:05 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatu
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:06 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatu%22
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:07 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:07 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:08 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/taskstatus
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
+2024/04/11 20:55:10 
+[34m------ Request Details ------[0m
+[33mMethod:[0m GET
+[33mURL:[0m ://localhost:8080/api/v1/task
+
+[33m------ Content ------[0m
+
+[33mContent:[0m
+{
+    "status":"in_progress"
+
+}
