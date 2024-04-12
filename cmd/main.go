@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -35,8 +36,8 @@ func main() {
 	}
 
 	database.InitStorage(db)
-
-	server := api.NewAPIServer(":8080", db)
+	address := fmt.Sprintf(":%s", config.Envs.Port)
+	server := api.NewAPIServer(address, db)
 
 	if err := server.Run(); err != nil {
 		log.Fatal(err)
