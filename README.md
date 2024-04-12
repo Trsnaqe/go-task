@@ -8,7 +8,7 @@ Our API is live on an EC2 instance. Access the Swagger documentation [here](http
 
 ## Postman Documentation
 
-Interact effortlessly with our API using Postman. Refer to the [Postman Documentation](https://documenter.getpostman.com/view/19898564/2sA3Bhfabi) and [Request Collection](https://api.postman.com/collections/19898564-424a85cf-5089-411a-ae51-e60d2d33df88?access_key=PMAT-01HV9J2MRXNZ6X03PDB0363WB1).
+Interact effortlessly with our API using Postman. Refer to the [Postman Documentation](https://documenter.getpostman.com/view/19898564/2sA3Bhfabi) and [Request Collection](https://elements.getpostman.com/redirect?entityId=19898564-424a85cf-5089-411a-ae51-e60d2d33df88&entityType=collection).
 
 ## Deployment
 
