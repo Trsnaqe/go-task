@@ -183,8 +183,10 @@ func TestUpdateTask(t *testing.T) {
 
 	store := NewStore(db)
 	taskID := 1
-	updates := types.Task{
-		Title: "Updated Title",
+	updatedTitle := "Updated Title"
+
+	updates := types.UpdateTaskPayload{
+		Title: &updatedTitle,
 	}
 
 	mock.ExpectExec("UPDATE tasks SET title = \\?, updated_at = \\? WHERE id = ?").

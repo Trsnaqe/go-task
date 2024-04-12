@@ -20,16 +20,17 @@ func NewHandler(store types.UserStore) *Handler {
 }
 
 // HandleLogin   login
-//	@Summary		Login to Account
-//	@Description	Login to Account using email and password
-//	@Tags			User
-//	@Accept			json
-//	@Produce		json
-//	@Param			RegisterPayload	body		types.LoginUserPayload	true	"User email and password"
-//	@Success		200				{object}	types.Tokens
-//	@Failure		400				{object}	types.ErrorResponse
-//	@Failure		500				{object}	types.ErrorResponse
-//	@Router			/login [post]
+//
+// @Summary     Login to Account
+// @Description Login to Account using email and password
+// @Tags        User
+// @Accept      json
+// @Produce     json
+// @Param       RegisterPayload body     types.LoginUserPayload true "User email and password"
+// @Success     200             {object} types.Tokens
+// @Failure     400             {object} types.ErrorResponse
+// @Failure     500             {object} types.ErrorResponse
+// @Router      /login [post]
 func (h *Handler) handleLogin(w http.ResponseWriter, r *http.Request) {
 	var payload types.LoginUserPayload
 	err := utils.ParseJSON(r, &payload)
@@ -65,7 +66,7 @@ func (h *Handler) handleLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = h.store.UpdateUser(u.ID, types.User{RefreshToken: &hashedRefreshToken})
+	err = h.store.UpdateUser(u.ID, types.UpdateUserPayload{RefreshToken: &hashedRefreshToken})
 	if err != nil {
 		utils.WriteError(w, http.StatusInternalServerError, err)
 		return
@@ -75,16 +76,17 @@ func (h *Handler) handleLogin(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleRegister   register
-//	@Summary		Register to Account
-//	@Description	Register to Account using email and password
-//	@Tags			User
-//	@Accept			json
-//	@Produce		json
-//	@Param			RegisterPayload	body		types.RegisterUserPayload	true	"User email and password"
-//	@Success		201				{object}	types.Tokens
-//	@Failure		400				{object}	types.ErrorResponse
-//	@Failure		500				{object}	types.ErrorResponse
-//	@Router			/register [post]
+//
+// @Summary     Register to Account
+// @Description Register to Account using email and password
+// @Tags        User
+// @Accept      json
+// @Produce     json
+// @Param       RegisterPayload body     types.RegisterUserPayload true "User email and password"
+// @Success     201             {object} types.Tokens
+// @Failure     400             {object} types.ErrorResponse
+// @Failure     500             {object} types.ErrorResponse
+// @Router      /register [post]
 func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
 	var payload types.RegisterUserPayload
 	err := utils.ParseJSON(r, &payload)
@@ -136,7 +138,7 @@ func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = h.store.UpdateUser(createdUser.ID, types.User{RefreshToken: &hashedRefreshToken})
+	err = h.store.UpdateUser(createdUser.ID, types.UpdateUserPayload{RefreshToken: &hashedRefreshToken})
 	if err != nil {
 		utils.WriteError(w, http.StatusInternalServerError, err)
 		return
@@ -146,18 +148,19 @@ func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleLogout   logout
-//	@Summary		Logout from Account
-//	@Description	Removes refresh token from user, effectively logging out
-//	@Tags			User
-//	@Accept			json
-//	@Produce		json
-//	@Security		ApiKeyAuth
-//	@Success		201	{object}	nil
-//	@Failure		400	{object}	types.ErrorResponse
-//	@Failure		401	{object}	types.ErrorResponse
-//	@Failure		403	{object}	types.ErrorResponse
-//	@Failure		500	{object}	types.ErrorResponse
-//	@Router			/logout [post]
+//
+// @Summary     Logout from Account
+// @Description Removes refresh token from user, effectively logging out
+// @Tags        User
+// @Accept      json
+// @Produce     json
+// @Security    jwtKey
+// @Success     201 {object} nil
+// @Failure     400 {object} types.ErrorResponse
+// @Failure     401 {object} types.ErrorResponse
+// @Failure     403 {object} types.ErrorResponse
+// @Failure     500 {object} types.ErrorResponse
+// @Router      /logout [post]
 func (h *Handler) handleLogout(w http.ResponseWriter, r *http.Request) {
 	log.Println("logout")
 	log.Println(types.UserKey)
@@ -169,7 +172,7 @@ func (h *Handler) handleLogout(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = h.store.UpdateUser(u.ID, types.User{RefreshToken: nil})
+	err = h.store.UpdateUser(u.ID, types.UpdateUserPayload{RefreshToken: nil})
 	if err != nil {
 		utils.WriteError(w, http.StatusInternalServerError, err)
 		return
@@ -178,18 +181,20 @@ func (h *Handler) handleLogout(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleRefresh   refresh
-//	@Summary		Refresh Tokens
-//	@Description	Refresh tokens using refresh token
-//	@Tags			User
-//	@Accept			json
-//	@Produce		json
-//	@Security		ApiKeyAuth
-//	@Success		201	{object}	types.Tokens
-//	@Failure		400	{object}	types.ErrorResponse
-//	@Failure		401	{object}	types.ErrorResponse
-//	@Failure		403	{object}	types.ErrorResponse
-//	@Failure		500	{object}	types.ErrorResponse
-//	@Router			/refresh [post]
+//
+// @Summary     Refresh Tokens
+// @Description Refresh tokens using refresh token
+// @Tags        User
+// @Accept      json
+// @Produce     json
+// @Security    jwtKey
+// @Success     201 {object} types.Tokens
+// @Failure     400 {object} types.ErrorResponse
+// @Failure     401 {object} types.ErrorResponse
+// @Failure     403 {object} types.ErrorResponse
+// @Failure     500 {object} types.ErrorResponse
+// @Router      /refresh [post]
+//
 // refreshes access and refresh token using refresh token
 func (h *Handler) handleRefreshToken(w http.ResponseWriter, r *http.Request) {
 	tokenString := utils.GetTokenFromRequest(r)
@@ -227,7 +232,7 @@ func (h *Handler) handleRefreshToken(w http.ResponseWriter, r *http.Request) {
 		utils.WriteError(w, http.StatusInternalServerError, err)
 		return
 	}
-	err = h.store.UpdateUser(userId, types.User{RefreshToken: &hashedRefreshToken})
+	err = h.store.UpdateUser(userId, types.UpdateUserPayload{RefreshToken: &hashedRefreshToken})
 	if err != nil {
 		utils.WriteError(w, http.StatusInternalServerError, err)
 		return
@@ -236,20 +241,20 @@ func (h *Handler) handleRefreshToken(w http.ResponseWriter, r *http.Request) {
 }
 
 // HandleChangePassword   change-password
-//	@Summary		Change Password
-//	@Description	Change password using old password
-//	@Tags			User
-//	@Accept			json
-//	@Produce		json
-//	@Security		ApiKeyAuth
-//	@Param			ChangePasswordPayload	body		types.ChangePasswordPayload	true	"Old and new password"
-//	@Success		200						{object}	nil
-//	@Failure		400						{object}	types.ErrorResponse
-//	@Failure		401						{object}	types.ErrorResponse
-//	@Failure		403						{object}	types.ErrorResponse
-//	@Failure		500						{object}	types.ErrorResponse
-//	@Router			/change-password [post]
-// Changes user password using old password
+//
+// @Summary     Change Password
+// @Description Change password using old password
+// @Tags        User
+// @Accept      json
+// @Produce     json
+// @Security    jwtKey
+// @Param       ChangePasswordPayload body     types.ChangePasswordPayload true "Old and new password"
+// @Success     200                   {object} nil
+// @Failure     400                   {object} types.ErrorResponse
+// @Failure     401                   {object} types.ErrorResponse
+// @Failure     403                   {object} types.ErrorResponse
+// @Failure     500                   {object} types.ErrorResponse
+// @Router      /change-password [post]
 func (h *Handler) ChangePassword(w http.ResponseWriter, r *http.Request) {
 	var payload types.ChangePasswordPayload
 	err := utils.ParseJSON(r, &payload)

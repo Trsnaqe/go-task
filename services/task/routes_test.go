@@ -134,7 +134,7 @@ func (m *mockTaskStore) CreateTask(task types.Task) error {
 	return nil
 }
 
-func (m *mockTaskStore) UpdateTask(taskID int, updates types.Task) error {
+func (m *mockTaskStore) UpdateTask(taskID int, updates types.UpdateTaskPayload) error {
 	return nil
 }
 

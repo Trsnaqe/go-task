@@ -73,15 +73,15 @@ func (s *Store) CreateUser(u types.User) error {
 	return err
 }
 
-func (s *Store) UpdateUser(userID int, updates types.User) error {
+func (s *Store) UpdateUser(userID int, updates types.UpdateUserPayload) error {
 	var setValues []string
 	var args []interface{}
 
-	if updates.Email != "" {
+	if updates.Email != nil {
 		setValues = append(setValues, "email = ?")
 		args = append(args, updates.Email)
 	}
-	if updates.Password != "" {
+	if updates.Password != nil {
 		setValues = append(setValues, "password = ?")
 		args = append(args, updates.Password)
 	}
@@ -112,7 +112,7 @@ func (s *Store) ChangePassword(userID int, oldPassword string, newPassword strin
 	if err != nil {
 		return err
 	}
-	err = s.UpdateUser(u.ID, types.User{Password: hashedPassword})
+	err = s.UpdateUser(u.ID, types.UpdateUserPayload{Password: &hashedPassword})
 	return err
 }
 

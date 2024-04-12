@@ -115,7 +115,7 @@ func TestUpdateUser(t *testing.T) {
 		WithArgs(email, sqlmock.AnyArg(), userID). // Use sqlmock.AnyArg() for time argument
 		WillReturnResult(sqlmock.NewResult(0, 1))
 
-	err = store.UpdateUser(userID, types.User{Email: email})
+	err = store.UpdateUser(userID, types.UpdateUserPayload{Email: &email})
 	if err != nil {
 		t.Errorf("unexpected error: %v", err)
 		return

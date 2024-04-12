@@ -95,19 +95,19 @@ func validateCreateTaskPayload(payload types.CreateTaskPayload) error {
 	return nil
 }
 
-func (s *Store) UpdateTask(taskID int, updates types.Task) error {
+func (s *Store) UpdateTask(taskID int, updates types.UpdateTaskPayload) error {
 	var setValues []string
 	var args []interface{}
 
-	if updates.Title != "" {
+	if updates.Title != nil {
 		setValues = append(setValues, "title = ?")
 		args = append(args, updates.Title)
 	}
-	if updates.Description != "" {
+	if updates.Description != nil {
 		setValues = append(setValues, "description = ?")
 		args = append(args, updates.Description)
 	}
-	if updates.Status != "" {
+	if updates.Status != nil {
 		setValues = append(setValues, "status = ?")
 		args = append(args, updates.Status)
 	}
@@ -135,7 +135,7 @@ func (s *Store) ProgressTask(taskID int) error {
 		return errors.New("task is already completed")
 	}
 
-	return s.UpdateTask(taskID, types.Task{Status: task.Status})
+	return s.UpdateTask(taskID, types.UpdateTaskPayload{Status: &task.Status})
 }
 
 func (s *Store) DeleteTask(taskID int) error {

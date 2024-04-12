@@ -13,15 +13,15 @@ import (
 func registerCommonRoutes(router *mux.Router) {
 
 	// GetLog   get-log
-	//	@Summary		Check logs
-	//	@Description	Endpoint that serves the log file
-	//	@Tags			API
-	//	@Accept			json
-	//	@Produce		json
-	//	@Success		200	{file}		log.txt
-	//	@Failure		400	{object}	types.ErrorResponse
-	//	@Failure		500	{object}	types.ErrorResponse
-	//	@Router			/log [get]
+	// @Summary     Check logs
+	// @Description Endpoint that serves the log file
+	// @Tags        API
+	// @Accept      json
+	// @Produce     json
+	// @Success     200 {file}   log.txt
+	// @Failure     400 {object} types.ErrorResponse
+	// @Failure     500 {object} types.ErrorResponse
+	// @Router      /log [get]
 	router.HandleFunc("/log", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "app.log")
 	}).Methods(http.MethodGet)
@@ -29,15 +29,15 @@ func registerCommonRoutes(router *mux.Router) {
 	router.HandleFunc("/log",
 
 		// DeleteLog   delete-log
-		//	@Summary		Delete logs
-		//	@Description	Endpoint that deletes the content of log file
-		//	@Tags			API
-		//	@Accept			json
-		//	@Produce		json
-		//	@Success		200	{object}	string
-		//	@Failure		400	{object}	types.ErrorResponse
-		//	@Failure		500	{object}	types.ErrorResponse
-		//	@Router			/log [delete]
+		// @Summary     Delete logs
+		// @Description Endpoint that deletes the content of log file
+		// @Tags        API
+		// @Accept      json
+		// @Produce     json
+		// @Success     200 {object} string
+		// @Failure     400 {object} types.ErrorResponse
+		// @Failure     500 {object} types.ErrorResponse
+		// @Router      /log [delete]
 		func(w http.ResponseWriter, r *http.Request) {
 			//delete the content of app.log
 			file, err := os.OpenFile("app.log", os.O_TRUNC, 0666)
@@ -51,15 +51,15 @@ func registerCommonRoutes(router *mux.Router) {
 		}).Methods(http.MethodDelete)
 
 	// Health   		health
-	//	@Summary		Check health
-	//	@Description	Endpoint to check health
-	//	@Tags			API
-	//	@Accept			json
-	//	@Produce		json
-	//	@Success		200	{object}	string
-	//	@Failure		400	{object}	types.ErrorResponse
-	//	@Failure		500	{object}	types.ErrorResponse
-	//	@Router			/health [get]
+	// @Summary     Check health
+	// @Description Endpoint to check health
+	// @Tags        API
+	// @Accept      json
+	// @Produce     json
+	// @Success     200 {object} string
+	// @Failure     400 {object} types.ErrorResponse
+	// @Failure     500 {object} types.ErrorResponse
+	// @Router      /health [get]
 	router.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 
@@ -67,15 +67,15 @@ func registerCommonRoutes(router *mux.Router) {
 	}).Methods(http.MethodGet)
 
 	// Metrics   metrics
-	//	@Summary		Check metrics
-	//	@Description	Endpoint that serves the metrics
-	//	@Tags			API
-	//	@Accept			json
-	//	@Produce		json
-	//	@Success		200	{object}	string
-	//	@Failure		400	{object}	types.ErrorResponse
-	//	@Failure		500	{object}	types.ErrorResponse
-	//	@Router			/metrics [get]
+	// @Summary     Check metrics
+	// @Description Endpoint that serves the metrics
+	// @Tags        API
+	// @Accept      json
+	// @Produce     json
+	// @Success     200 {object} string
+	// @Failure     400 {object} types.ErrorResponse
+	// @Failure     500 {object} types.ErrorResponse
+	// @Router      /metrics [get]
 	router.Handle("/metrics", promhttp.Handler())
 
 	router.PathPrefix("/swagger").Handler(httpSwagger.WrapHandler)

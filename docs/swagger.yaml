@@ -21,12 +21,11 @@ definitions:
         minLength: 3
         type: string
       status:
-        allOf:
-        - $ref: '#/definitions/types.TaskStatus'
         enum:
         - pending
         - in_progress
         - completed
+        type: string
       title:
         maxLength: 32
         minLength: 3
@@ -76,22 +75,12 @@ definitions:
       id:
         type: integer
       status:
-        $ref: '#/definitions/types.TaskStatus'
+        type: string
       title:
         type: string
       updated_at:
         type: string
     type: object
-  types.TaskStatus:
-    enum:
-    - pending
-    - in_progress
-    - completed
-    type: string
-    x-enum-varnames:
-    - StatusPending
-    - StatusInProgress
-    - StatusCompleted
   types.Tokens:
     properties:
       access_token:
@@ -99,19 +88,27 @@ definitions:
       refresh_token:
         type: string
     type: object
-externalDocs:
-  description: OpenAPI
-  url: https://swagger.io/resources/open-api/
+  types.UpdateTaskPayload:
+    properties:
+      description:
+        maxLength: 255
+        minLength: 3
+        type: string
+      status:
+        enum:
+        - pending
+        - in_progress
+        - completed
+        type: string
+      title:
+        maxLength: 32
+        minLength: 3
+        type: string
+    type: object
 host: localhost:8080
 info:
-  contact:
-    email: support@swagger.io
-    name: API Support
-    url: http://www.swagger.io/support
-  description: This is a simple golang backend API prepared for a task.
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  contact: {}
+  description: This is a simple Golang backend API prepared for a task.
   title: GOLANG API
   version: "1.0"
 paths:
@@ -149,35 +146,10 @@ paths:
           schema:
             $ref: '#/definitions/types.ErrorResponse'
       security:
-      - ApiKeyAuth: []
+      - jwtKey: []
       summary: Change Password
       tags:
       - User
-  /concurrency:
-    post:
-      consumes:
-      - application/json
-      description: Endpoint to demonstrate queued processing, Check logs for processing
-        status and prometheus metrics in `api/v1/metrics` for queue length and tasks
-        processed
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            type: string
-        "400":
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/types.ErrorResponse'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/types.ErrorResponse'
-      summary: Concurrency Demo
-      tags:
-      - Task
   /login:
     post:
       consumes:
@@ -235,7 +207,7 @@ paths:
           schema:
             $ref: '#/definitions/types.ErrorResponse'
       security:
-      - ApiKeyAuth: []
+      - jwtKey: []
       summary: Logout from Account
       tags:
       - User
@@ -268,7 +240,7 @@ paths:
           schema:
             $ref: '#/definitions/types.ErrorResponse'
       security:
-      - ApiKeyAuth: []
+      - jwtKey: []
       summary: Refresh Tokens
       tags:
       - User
@@ -457,6 +429,12 @@ paths:
         name: id
         required: true
         type: integer
+      - description: Task updates
+        in: body
+        name: UpdateTaskPayload
+        required: true
+        schema:
+          $ref: '#/definitions/types.UpdateTaskPayload'
       produces:
       - application/json
       responses:
@@ -475,7 +453,34 @@ paths:
       summary: Update Task
       tags:
       - Task
+  /task/concurrency:
+    post:
+      consumes:
+      - application/json
+      description: Endpoint to demonstrate queued processing, Check logs for processing
+        status and prometheus metrics in `api/v1/metrics` for queue length and tasks
+        processed
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/types.ErrorResponse'
+      summary: Concurrency Demo
+      tags:
+      - Task
 securityDefinitions:
-  BasicAuth:
-    type: basic
+  jwtKey:
+    in: header
+    name: Authorization
+    type: apiKey
 swagger: "2.0"

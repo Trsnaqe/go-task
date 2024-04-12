@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 
@@ -25,32 +26,33 @@ var Envs = initConfig()
 func initConfig() Config {
 	godotenv.Load()
 	return Config{
-		PublicHost:           getEnv("PUBLIC_HOST", "http://localhost"),
-		Port:                 getEnv("PORT", "8080"),
-		DBUser:               getEnv("DB_USER", "root"),
-		DBPassword:           getEnv("DB_PASSWORD", "admin"),
-		DBAddress:            fmt.Sprintf("%s:%s", getEnv("DB_HOST", "127.0.0.1"), getEnv("DB_PORT", "3306")),
-		DBName:               getEnv("DB_NAME", "gotask"),
-		JWTAccessExpiration:  getEnvAsInt("JWT_Access_EXPIRATION", 3600),
-		JWTRefreshExpiration: getEnvAsInt("JWT_REFRESH_EXPIRATION", 3600*24*7),
-		JWTSecret:            getEnv("JWT_SECRET)", "secret"),
+		PublicHost:           getEnv("PUBLIC_HOST"),
+		Port:                 getEnv("PORT"),
+		DBUser:               getEnv("DB_USER"),
+		DBPassword:           getEnv("DB_PASSWORD"),
+		DBAddress:            fmt.Sprintf("%s:%s", getEnv("DB_HOST"), getEnv("DB_PORT")),
+		DBName:               getEnv("DB_NAME"),
+		JWTAccessExpiration:  getEnvAsInt("JWT_ACCESS_EXPIRATION"),
+		JWTRefreshExpiration: getEnvAsInt("JWT_REFRESH_EXPIRATION"),
+		JWTSecret:            getEnv("JWT_SECRET"),
 	}
 }
-
-func getEnv(key, fallback string) string {
-	if value, ok := os.LookupEnv(key); ok {
-		return value
+func getEnv(key string) string {
+	value, ok := os.LookupEnv(key)
+	if !ok {
+		log.Fatalf("environment variable %s not set", key)
 	}
-
-	return fallback
+	return value
 }
 
-func getEnvAsInt(key string, fallback int64) int64 {
-	if value, ok := os.LookupEnv(key); ok {
-		if i, err := strconv.ParseInt(value, 10, 64); err == nil {
-			return i
-		}
+func getEnvAsInt(key string) int64 {
+	value, ok := os.LookupEnv(key)
+	if !ok {
+		log.Fatalf("environment variable %s not set", key)
 	}
-
-	return fallback
+	i, err := strconv.ParseInt(value, 10, 64)
+	if err != nil {
+		log.Fatalf("environment variable %s is not a valid integer", key)
+	}
+	return i
 }

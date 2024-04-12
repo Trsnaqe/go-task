@@ -4,14 +4,14 @@ type UserStore interface {
 	GetUserByEmail(email string) (*User, error)
 	GetUserByID(id int) (*User, error)
 	CreateUser(User) error
-	UpdateUser(userID int, updates User) error
+	UpdateUser(userID int, updates UpdateUserPayload) error
 	ChangePassword(userID int, oldPassword string, newPassword string) error
 }
 
 type TaskStore interface {
 	GetTasks() ([]Task, error)
 	CreateTask(Task) error
-	UpdateTask(taskID int, updates Task) error
+	UpdateTask(taskID int, updates UpdateTaskPayload) error
 	GetTaskByID(taskID int) (*Task, error)
 	DeleteTask(taskID int) error
 	ProgressTask(taskID int) error
@@ -32,6 +32,18 @@ type Task struct {
 	Status      TaskStatus `json:"status"`
 	CreatedAt   string     `json:"created_at"`
 	UpdatedAt   string     `json:"updated_at"`
+}
+
+type UpdateTaskPayload struct {
+	Title       *string     `json:"title" validate:"omitempty,min=3,max=32"`
+	Description *string     `json:"description" validate:"omitempty,min=3,max=255"`
+	Status      *TaskStatus `json:"status" validate:"omitempty,oneof=pending in_progress completed"`
+}
+
+type UpdateUserPayload struct {
+	Email        *string `json:"email" validate:"omitempty,email"`
+	Password     *string `json:"password" validate:"omitempty,min=6,max=32"`
+	RefreshToken *string `json:"refresh_token" validate:"omitempty"`
 }
 
 type Tokens struct {

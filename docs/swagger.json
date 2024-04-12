@@ -1,17 +1,9 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is a simple golang backend API prepared for a task.",
+        "description": "This is a simple Golang backend API prepared for a task.",
         "title": "GOLANG API",
-        "contact": {
-            "name": "API Support",
-            "url": "http://www.swagger.io/support",
-            "email": "support@swagger.io"
-        },
-        "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-        },
+        "contact": {},
         "version": "1.0"
     },
     "host": "localhost:8080",
@@ -21,7 +13,7 @@
             "post": {
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "jwtKey": []
                     }
                 ],
                 "description": "Change password using old password",
@@ -64,41 +56,6 @@
                     },
                     "403": {
                         "description": "Forbidden",
-                        "schema": {
-                            "$ref": "#/definitions/types.ErrorResponse"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "$ref": "#/definitions/types.ErrorResponse"
-                        }
-                    }
-                }
-            }
-        },
-        "/concurrency": {
-            "post": {
-                "description": "Endpoint to demonstrate queued processing, Check logs for processing status and prometheus metrics in `api/v1/metrics` for queue length and tasks processed",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Task"
-                ],
-                "summary": "Concurrency Demo",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
                         "schema": {
                             "$ref": "#/definitions/types.ErrorResponse"
                         }
@@ -162,7 +119,7 @@
             "post": {
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "jwtKey": []
                     }
                 ],
                 "description": "Removes refresh token from user, effectively logging out",
@@ -211,7 +168,7 @@
             "post": {
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "jwtKey": []
                     }
                 ],
                 "description": "Refresh tokens using refresh token",
@@ -394,6 +351,41 @@
                 }
             }
         },
+        "/task/concurrency": {
+            "post": {
+                "description": "Endpoint to demonstrate queued processing, Check logs for processing status and prometheus metrics in `api/v1/metrics` for queue length and tasks processed",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Task"
+                ],
+                "summary": "Concurrency Demo",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/types.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/types.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/task/{id}": {
             "get": {
                 "description": "Get Task by ID",
@@ -456,6 +448,15 @@
                         "name": "id",
                         "in": "path",
                         "required": true
+                    },
+                    {
+                        "description": "Task updates",
+                        "name": "UpdateTaskPayload",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/types.UpdateTaskPayload"
+                        }
                     }
                 ],
                 "responses": {
@@ -599,15 +600,11 @@
                     "minLength": 3
                 },
                 "status": {
+                    "type": "string",
                     "enum": [
                         "pending",
                         "in_progress",
                         "completed"
-                    ],
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/types.TaskStatus"
-                        }
                     ]
                 },
                 "title": {
@@ -675,7 +672,7 @@
                     "type": "integer"
                 },
                 "status": {
-                    "$ref": "#/definitions/types.TaskStatus"
+                    "type": "string"
                 },
                 "title": {
                     "type": "string"
@@ -684,19 +681,6 @@
                     "type": "string"
                 }
             }
-        },
-        "types.TaskStatus": {
-            "type": "string",
-            "enum": [
-                "pending",
-                "in_progress",
-                "completed"
-            ],
-            "x-enum-varnames": [
-                "StatusPending",
-                "StatusInProgress",
-                "StatusCompleted"
-            ]
         },
         "types.Tokens": {
             "type": "object",
@@ -708,15 +692,36 @@
                     "type": "string"
                 }
             }
+        },
+        "types.UpdateTaskPayload": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "minLength": 3
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "pending",
+                        "in_progress",
+                        "completed"
+                    ]
+                },
+                "title": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 3
+                }
+            }
         }
     },
     "securityDefinitions": {
-        "BasicAuth": {
-            "type": "basic"
+        "jwtKey": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
         }
-    },
-    "externalDocs": {
-        "description": "OpenAPI",
-        "url": "https://swagger.io/resources/open-api/"
     }
 }
